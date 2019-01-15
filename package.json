@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-static": "^1.2.6",
+    "serve-static": "^1.13.2",
+    "socket.io": "^2.2.0",
+    "xterm": "^3.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
