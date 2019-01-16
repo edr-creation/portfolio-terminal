@@ -28,10 +28,10 @@ function initPrompt() {
 }
 
 function help() {
-    term.writeln('\nBienvenue sur mon \x1B[1;3;31mPortfolio\x1B[0m');
+    term.writeln('\nBienvenue sur mon \033[35mPortfolio\033[0m');
     term.writeln('Liste des commandes :');
-    term.writeln('\thelp -- show this help');
-    term.write('\tclear -- clear the screen');
+    term.writeln('\t\33[35mhelp\033[0m -- show this help');
+    term.write('\t\33[35mclear\033[0m -- clear the screen');
 }
 
 var socket = io();
@@ -44,16 +44,45 @@ const term = new Terminal({
     letterSpacing: '2',
     fontSize: '18',
     theme: {
-        background: '#bbbbbb'
+        background: '#1B123A',
+        foreground: '#f8f8f8',
+        cursor: '#f8f8f8',
+        cursorAccent: '#f8f8f8',
+        selection: '#f8f8f8',
+        black: '#1B123A',
+        brightBlack: '#B304B5',
+        red: '#FF009D',
+        brightRed: '#FFE719',
+        green: '#2DFFFE',
+        brightGreen: '#16BC14',
+        yellow: '#ffa800',
+        brightYellow: '#e1a126',
+        blue: '#0EF7F7',
+        brightBlue: '#0EF7F7',
+        magenta: '#F20EF7',
+        brightMagenta: '#F20EF7',
+        cyan: '#0fdcb6',
+        brightCyan: '#0a9b81',
+        white: '#ebebeb',
+        brightWhite: '#f8f8f8'
     }
 });
 
 term.prompt = () => {
-    term.write('\r\nroot @ ~ $ ');
+    term.write('\r\n\033[31mroot@localhost\033[032m ~ $ \033[0m');
 };
 
 term.open(document.getElementById('terminal-container'));
-term.write('Bienvenue sur mon \x1B[1;3;31mPortfolio\x1B[0m');
+term.write('\033[032m');
+term.write(`
+ _____                ______       ______                     _       
+|  ___|               |  _  \\      | ___ \\                   (_)      
+| |__ _ __  _______   | | | |___   | |_/ /___  ___  __ _ _ __ _  ___
+|  __| '_ \\|_  / _ \\  | | | / _ \\  |    // _ \\/ __|/ _\` | '__| |/ _ \\
+| |__| | | |/ / (_) | | |/ / (_) | | |\\ \\ (_) \\__ \\ (_| | |  | | (_) |
+\\____/_| |_/___\\___/  |___/ \\___/  \\_| \\_\\___/|___/\\__,_|_|  |_|\\___/ 
+`);
+help();
 initPrompt();
 
 term.addDisposableListener('key', (key, ev) => {
