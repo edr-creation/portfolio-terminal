@@ -8,8 +8,11 @@
   },
   "dependencies": {
     "animate.css": "^3.7.0",
+    "commander": "^2.19.0",
     "express": "^4.16.4",
     "express-static": "^1.2.6",
+    "inquirer": "^6.2.1",
+    "opn": "^5.4.0",
     "serve-static": "^1.13.2",
     "socket.io": "^2.2.0",
     "xterm": "^3.10.1"
