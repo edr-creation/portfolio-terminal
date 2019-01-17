@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+:root {
+    --background--color: #1B123A;
+    --primary--font--color: #f8f8f8;
+    --general--animation--duration: 1s;
+}
+
+body {
+    background-color: var(--background--color);
+}
+
+.container {}
+
+.header--title {
+    animation-duration: var(--general--animation--duration);
+
+    color: var(--primary--font--color);
+
+    font-family: 'Press Start 2P', Arial, cursive;
+    font-size: 1.8em;
+
+    text-align: center;
+}
+
+.portfolio-terminal {
+    animation-duration: var(--general--animation--duration);
+    animation-delay: var(--general--animation--duration);
+
+    border: 2px solid #FF009D;
+
+    padding-left: 2%;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .header--title {
+        font-size: 3em;
+    }
+}
