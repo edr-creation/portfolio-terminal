@@ -23,6 +23,18 @@ body {
     text-align: center;
 }
 
+.header--subtitle {
+    animation-duration: var(--general--animation--duration);
+    animation-delay: var(--general--animation--duration);
+
+    color: var(--primary--font--color);
+
+    font-family: 'Press Start 2P', Arial, cursive;
+    font-size: 1.4em;
+
+    text-align: center;
+}
+
 .portfolio-terminal {
     animation-duration: var(--general--animation--duration);
     animation-delay: var(--general--animation--duration);
